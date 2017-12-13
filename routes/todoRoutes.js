@@ -8,11 +8,11 @@ const db = require("../models");
 router.get("/", (req, res) => {
     db.Todo.find()
         .then(data => {
-            console.log(data);
+            res.json(data);
         })
         .catch(err => {
             console.log(err);
         })
 })
 
-module.exports = Router;
+module.exports = router;

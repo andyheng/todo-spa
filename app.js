@@ -12,8 +12,7 @@ app.get("/", (req, res) => {
 
 //Routes: Router
 //Pass in a prefix, and then the required routes const
-app.use("api/todos", todoRoutes);
-
+app.use("/api/todos", todoRoutes);
 
 //Listen
 app.listen(3000 || process.env.PORT, () => {
