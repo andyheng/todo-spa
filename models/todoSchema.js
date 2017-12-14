@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //Creating the todo schema
 const todoSchema = new mongoose.Schema({
-    item: {
+    todoName: {
         type: String,
         required: "Field cannot be blank"
     },
