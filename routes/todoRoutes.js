@@ -19,9 +19,8 @@ router.get("/", (req, res) => {
 
 //Create
 router.post("/", (req, res) => {
-    db.Todo.create({
-        item: req.body
-    })
+  console.log(req.body);
+    db.Todo.create(req.body)
       .then(created => {
         res.json(created);
       })
