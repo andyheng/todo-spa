@@ -1,3 +1,92 @@
-h1 {
-    color: red;
+$dullwhite: #e3e3e3;
+$gray: #838383;
+$darkblue: #232e42;
+$fontstack: "Open Sans", Helvetica, sans-serif;
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 60%;
+    background: $dullwhite;
+    color: $gray;
+    font-family: $fontstack;
+    display: flex;
+    flex-flow: column;
+}
+
+header {
+    text-align: center;
+    margin-top: 40px;
+}
+
+header {
+    h1 {
+        margin: 0;
+        font-size: 5em;
+        font-weight: 300;
+        line-height: 1em;
+        letter-spacing: 5px;
+    }
+    span {
+        font-weight: 700;
+    }
+    p {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+    }
+}
+
+input {
+    width: 100%;
+    background: $dullwhite;
+    color: $gray;
+    border: none;
+    border-bottom: 2px solid $gray;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+.default {
+    text-align: center;
+    font-weight: 300;
+    color: $darkblue;
+    font-size: 2em;
+}
+.hidden {
+    display: none;
+}
+
+.list {
+    color: $darkblue;
+    font-size: 1.5em;
+    margin-top: 2em;
+}
+.list li {
+    padding: 0.8em;
+    margin: 0.8em 0;
+    transition: background 0.5s ease-in;
+}
+
+// Hover and delete button shit
+.list li:hover {
+    background: #c4c4c4;
+    cursor: pointer;
+}
+.delete {
+    float: right;
+    font-size: 16px;
+    opacity: 0;
+    padding: 10px 16px;
+    transition:
+        color 0.2s ease-in,
+        opacity 0.2s ease-in,
+        background 0.2s ease-in
+}
+.list li:hover .delete {
+    background: $darkblue;
+    color: $dullwhite;
+    opacity: 1;
+}
+.complete {
+    text-decoration: line-through;
 }
